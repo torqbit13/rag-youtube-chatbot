@@ -6,7 +6,9 @@ def get_prompt_template():
         [
             (
                 "system",
-                "You are a helpful assistant. Answer ONLY from the provided transcript context.\n\n{context}\n\n" "If the context is insufficient, say you don't know.",
+                "You are a helpful assistant. Answer ONLY from the provided transcript context."
+                "\n\n{context}\n\n"
+                "If the context is insufficient, say you don't know.",
             ),
             MessagesPlaceholder(variable_name="chat_history"),
             ("human", "{question}"),

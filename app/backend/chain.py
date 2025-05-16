@@ -13,9 +13,7 @@ from backend.history import load_chat_history
 
 def build_chain(retriever):
     prompt = get_prompt_template()
-    llm = ChatGoogleGenerativeAI(
-        model="gemini-1.5-flash-8b", google_api_key=GOOGLE_API_KEY
-    )
+    llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash-8b", google_api_key=GOOGLE_API_KEY)
 
     return (
         RunnableParallel(

@@ -1,7 +1,6 @@
 import streamlit as st
 from backend.chain import build_chain
 from loguru import logger
-from backend.config import GOOGLE_API_KEY
 from backend.embeddings import get_embedding_model
 from backend.history import clear_chat_history, load_chat_history, save_chat_history
 from backend.ingestion import fetch_transcript
@@ -28,9 +27,7 @@ def main():
     if "last_video_id" not in st.session_state:
         st.session_state.last_video_id = None
 
-    video_url = st.text_input(
-        "🎞️ Paste a YouTube Video URL to start a new conversation:"
-    )
+    video_url = st.text_input("🎞️ Paste a YouTube Video URL to start a new conversation:")
     question = st.chat_input("💬 Ask a question based on the video transcript:")
 
     if video_url:

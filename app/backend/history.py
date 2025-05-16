@@ -1,7 +1,5 @@
 import os
 
-from langchain_core.messages import AIMessage, HumanMessage
-
 from backend.config import CHAT_HISTORY_FILE
 
 

@@ -23,5 +23,3 @@ Ask intelligent questions from any YouTube video using its transcript — powere
 - [FAISS](https://github.com/facebookresearch/faiss)
 
 ---
-
-
