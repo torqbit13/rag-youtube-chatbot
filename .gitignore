@@ -103,6 +103,9 @@ venv.bak/
 #Python Version (File indicating the what pyenv virtalenv one is using for the project)
 .python-version
 
+#secrets for streamlit to function the app 
+.streamlit/secrets.toml
+
 # Spyder project settings
 .spyderproject
 .spyproject
