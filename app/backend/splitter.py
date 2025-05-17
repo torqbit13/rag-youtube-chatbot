@@ -1,6 +1,8 @@
 from langchain.text_splitter import RecursiveCharacterTextSplitter
+from backend.config import CHUNK_SIZE, CHUNK_OVERLAP
 
 
-def split_transcript(transcript: str, chunk_size=1000, chunk_overlap=200):
+def split_transcript(transcript: str, chunk_size=CHUNK_SIZE, chunk_overlap=CHUNK_OVERLAP):
     splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
-    return splitter.create_documents([transcript])
+    chunks = splitter.create_documents([transcript])
+    return chunks
